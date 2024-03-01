@@ -18,6 +18,9 @@ export namespace withService {
 	}
 }
 
+/**
+ * Creates a service binding for the container; it could be used to bind a class, factory, or value to the container and resolve it.
+ */
 export const withService = <TService>(key: string): withService.Service<TService> => {
 	return {
 		service: proxyOf,

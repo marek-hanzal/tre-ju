@@ -21,6 +21,9 @@ export namespace Container {
 }
 export type Container = ReturnType<typeof Container>;
 
+/**
+ * Container wrapper around PumpIp. It provides a fluent interface for binding classes, factories, and values to the container.
+ */
 export const Container = (
 	{
 		container = new PumpIt(),
