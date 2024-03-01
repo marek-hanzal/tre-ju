@@ -18,6 +18,8 @@ export namespace Container {
 	export interface Props {
 		container: PumpIt,
 	}
+
+	export type Register = (container: Container) => Container;
 }
 export type Container = ReturnType<typeof Container>;
 
@@ -27,7 +29,9 @@ export type Container = ReturnType<typeof Container>;
 export const Container = (
 	{
 		container = new PumpIt(),
-	}: Container.Props
+	}: Container.Props = {
+		container: new PumpIt(),
+	}
 ) => {
 	return {
 		resolve:    function <T>(key: Container.Key) {

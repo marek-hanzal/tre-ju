@@ -8,6 +8,8 @@ export namespace withClient {
 	export interface Props {
 		dsn?: string;
 	}
+
+	export type Client<TDatabase> = Kysely<TDatabase>;
 }
 
 export const withClient = <TDatabase>(
