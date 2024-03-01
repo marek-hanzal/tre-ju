@@ -1,0 +1,23 @@
+{
+	"name": "tre-ju",
+	"private": true,
+	"scripts": {
+		"dev": "turbo run dev --parallel --no-daemon | roarr",
+		"build": "turbo run build --no-daemon",
+		"build:force": "turbo run build --force --no-daemon",
+		"start": "turbo run start --parallel --no-daemon",
+		"lint": "turbo run lint --no-daemon"
+	},
+	"dependencies": {
+		"turbo": "^1.12.4"
+	},
+	"devDependencies": {
+		"@roarr/cli": "^5.12.4",
+		"del-cli": "^5.1.0",
+		"typescript": "^5.3.3"
+	},
+	"workspaces": [
+		"apps/*",
+		"packages/**/*"
+	]
+}
