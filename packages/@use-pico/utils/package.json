@@ -1,7 +1,7 @@
 {
 	"version": "3.0.0",
-	"name": "@use-pico/server",
-	"description": "Server side stuff, DI container and so on. This is quite heavy dependency (core of server-side pico).",
+	"name": "@use-pico/utils",
+	"description": "Sharable utils both on client/server.",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -23,17 +23,11 @@
 		"build:esbuild": "node esbuild.mjs",
 		"build:types": "tsc --outDir lib"
 	},
-	"peerDependencies": {
-		"@use-pico/utils": "^3.0.0",
-		"kysely": "^0.27.2",
-		"pg": "^8.11.3",
-		"pumpit": "^7.0.0"
-	},
 	"devDependencies": {
-		"@types/node": "^20.11.24",
-		"@types/pg": "^8.11.2",
 		"@use-pico/esbuild": "^3.0.0",
 		"@use-pico/tsconfig": "^3.0.0",
+		"@types/node": "^20.11.24",
+		"@types/react": "^18.2.61",
 		"concurrently": "^8.2.2",
 		"del-cli": "^5.1.0",
 		"typescript": "^5.3.3"
