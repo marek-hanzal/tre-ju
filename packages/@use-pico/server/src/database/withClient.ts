@@ -1,27 +1,10 @@
 import {
-	Kysely,
-	PostgresDialect
-}             from "kysely";
-import {Pool} from "pg";
+	withClientFactory,
+	withService
+} from "@use-pico/server";
 
-export namespace withClient {
-	export interface Props {
-		dsn?: string;
-	}
-
-	export type Client<TDatabase> = Kysely<TDatabase>;
-}
-
-export const withClient = <TDatabase>(
-	{
-		dsn = process.env.DATEBASE_URL,
-	}: withClient.Props
-) => {
-	return new Kysely<TDatabase>({
-		dialect: new PostgresDialect({
-			pool: new Pool({
-				connectionString: dsn,
-			}),
-		}),
-	});
-};
+/**
+ * Access to a database client through container.
+ */
+export const withClient = withService<withClientFactory.Client<any>>("@use-pico/server/withClient");
+export type withClient = typeof withClient;
