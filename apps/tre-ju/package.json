@@ -29,9 +29,12 @@
 		"@types/react-dom": "^18.2.19",
 		"@typescript-eslint/eslint-plugin": "^7.1.0",
 		"@typescript-eslint/parser": "^7.1.0",
+		"@unocss/postcss": "^0.58.5",
+		"@unocss/transformer-compile-class": "^0.58.5",
 		"eslint": "^8.57.0",
 		"eslint-config-next": "^14.1.0",
-		"typescript": "^5.3.3"
+		"typescript": "^5.3.3",
+		"unocss": "^0.58.5"
 	},
 	"ct3aMetadata": {
 		"initVersion": "7.26.0"
