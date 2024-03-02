@@ -1,3 +1,4 @@
+export * from "./AuthDatabase";
 export * from "./Container";
 export * from "./withClient";
 export * from "./withClientFactory";
