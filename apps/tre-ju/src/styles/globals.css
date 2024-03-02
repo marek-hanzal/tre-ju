@@ -1,3 +1,9 @@
 @import '@unocss/reset/tailwind.css';
 
-@unocss all;
+@unocss;
+
+html,
+body,
+:root {
+	height: 100%;
+}
