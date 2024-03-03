@@ -4,7 +4,7 @@ import {
 	withClient
 }                      from "@tre-ju/server";
 import NextAuth        from "next-auth";
-import GitHub          from "next-auth/providers/github";
+import {AuthConfig}    from "~/server/auth.config";
 
 export const {
 	handlers: {
@@ -13,9 +13,6 @@ export const {
 			  },
 	auth,
 } = NextAuth({
-	adapter:   KyselyAdapter(withClient.use(container)),
-	session:   {strategy: "jwt"},
-	providers: [
-		GitHub({}),
-	],
+	adapter: KyselyAdapter(withClient.use(container)),
+	...AuthConfig,
 });
