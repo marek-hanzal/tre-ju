@@ -25,7 +25,7 @@
 	},
 	"peerDependencies": {
 		"@use-pico/utils": "^3.0.0",
-		"kysely": "^0.27.2",
+		"kysely": "^0.26.3",
 		"pg": "^8.11.3",
 		"pumpit": "^7.0.0"
 	},

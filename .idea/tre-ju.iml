@@ -9,9 +9,14 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/@use-pico/@misc/esbuild/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/@use-pico/server/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/@use-pico/utils/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/@tre-ju/client/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/packages/@use-pico/@misc/esbuild/.turbo" />
       <excludeFolder url="file://$MODULE_DIR$/packages/@use-pico/@misc/esbuild/lib" />
       <excludeFolder url="file://$MODULE_DIR$/apps/tre-ju/.turbo" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/@use-pico/server/.turbo" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/@use-pico/server/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/@use-pico/utils/.turbo" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/@use-pico/utils/lib" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

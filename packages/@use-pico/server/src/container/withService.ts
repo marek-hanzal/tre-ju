@@ -6,6 +6,8 @@ export namespace withService {
 	export interface Service<TService> {
 		service: TService;
 
+		key: string;
+
 		inject: symbol;
 
 		use(container: Container): TService;
@@ -24,6 +26,7 @@ export namespace withService {
 export const withService = <TService>(key: string): withService.Service<TService> => {
 	return {
 		service: proxyOf,
+		key,
 		inject:  Symbol.for(key),
 		use(container) {
 			return container.resolve<TService>(this.inject);
