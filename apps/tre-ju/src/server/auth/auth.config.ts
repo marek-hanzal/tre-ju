@@ -7,3 +7,8 @@ export const AuthConfig = {
 		GitHub({}),
 	],
 } satisfies NextAuthConfig;
+
+export const AuthRoutes = {
+	public:    [],
+	protected: [],
+} as const;

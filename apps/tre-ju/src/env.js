@@ -12,7 +12,7 @@ export const env = createEnv({
 		AUTH_SECRET:  z.string(),
 		AUTH_URL:     z.preprocess(
 			(str) => process.env.VERCEL_URL ?? str,
-			process.env.VERCEL ? z.string() : z.string().url()
+			process.env.VERCEL ? z.string().optional() : z.string().url().optional(),
 		),
 	},
 

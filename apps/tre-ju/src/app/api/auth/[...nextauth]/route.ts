@@ -1,4 +1,4 @@
 export {
 	GET,
 	POST
-} from "~/server/auth";
+} from "~/server/auth/auth";

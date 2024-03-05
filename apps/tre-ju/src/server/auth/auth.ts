@@ -4,7 +4,7 @@ import {
 	withClient
 }                      from "@tre-ju/server";
 import NextAuth        from "next-auth";
-import {AuthConfig}    from "~/server/auth.config";
+import {AuthConfig}    from "~/server/auth/auth.config";
 
 export const {
 	handlers: {
