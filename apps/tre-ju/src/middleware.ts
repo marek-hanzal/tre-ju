@@ -7,10 +7,30 @@ import {
 const {auth} = NextAuth(AuthConfig);
 
 export default auth(req => {
+	const {nextUrl} = req;
 	const isAuth = !!req.auth;
-	const isPublic = AuthRoutes.public.filter(route => req.nextUrl.pathname.startsWith(route)).length > 0;
-	const isProtected = AuthRoutes.protected.filter(route => req.nextUrl.pathname.startsWith(route)).length > 0;
-	console.log("isAuth", isAuth);
+	const isProtected = AuthRoutes.protected.filter(route => nextUrl.pathname.startsWith(route)).length > 0;
+	const isPublic = AuthRoutes.public.filter(route => nextUrl.pathname.startsWith(route)).length > 0;
+
+	/**
+	 * Do nothing, when we're working with the auth stuff
+	 */
+	if (nextUrl.pathname.startsWith("/api/auth")) {
+		return;
+	}
+
+	if (isProtected) {
+		if (isAuth) {
+			return Response.redirect(new URL("/journal", nextUrl));
+		}
+		return;
+	}
+
+	if (!isAuth && !isPublic) {
+		return Response.redirect(new URL("/auth/login", nextUrl));
+	}
+
+	return;
 });
 
 export const config = {

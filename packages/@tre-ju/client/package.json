@@ -12,6 +12,9 @@
 	],
 	"scripts": {
 	},
+	"peerDependencies": {
+		"next-auth": "^5.0.0-beta.15"
+	},
 	"devDependencies": {
 		"@types/node": "^20.11.24",
 		"@use-pico/esbuild": "^3.0.0",

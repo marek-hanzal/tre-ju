@@ -1,5 +1,7 @@
+import {LoginButton} from "@tre-ju/client";
+
 export default function Login() {
 	return <>
-		Login
+		<LoginButton provider={"github"}/>
 	</>;
 }

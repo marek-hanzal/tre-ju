@@ -1,12 +1,13 @@
 import {
 	Kysely,
 	PostgresDialect
-}             from "kysely";
-import {Pool} from "pg";
+}                        from "kysely";
+import {Pool}            from "pg";
+import {withPoolFactory} from "./withPoolFactory";
 
 export namespace withClientFactory {
 	export interface Props {
-		pool: Pool;
+		pool?: Pool;
 	}
 
 	export type Client<TDatabase> = Kysely<TDatabase>;
@@ -17,8 +18,10 @@ export namespace withClientFactory {
  */
 export const withClientFactory = <TDatabase>(
 	{
-		pool,
-	}: withClientFactory.Props
+		pool = withPoolFactory(),
+	}: withClientFactory.Props = {
+		pool: withPoolFactory(),
+	}
 ) => {
 	return new Kysely<TDatabase>({
 		dialect: new PostgresDialect({

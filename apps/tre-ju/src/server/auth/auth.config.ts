@@ -9,6 +9,10 @@ export const AuthConfig = {
 } satisfies NextAuthConfig;
 
 export const AuthRoutes = {
-	public:    [],
-	protected: [],
+	public:    [
+		"/",
+	],
+	protected: [
+		"/journal",
+	],
 } as const;
